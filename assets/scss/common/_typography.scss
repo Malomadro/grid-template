@@ -1,0 +1,25 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+h1 {
+  font-family: $font-header;
+  font-size: 3.75rem;
+  letter-spacing: 0.1em;
+  font-weight: 300;
+  line-height: 1.2em;
+}
+
+a {
+  text-decoration: none;
+  color: $color-light
+}

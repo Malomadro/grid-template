@@ -1,0 +1,16 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.header-logo {
+
+  &__link {
+    display: block;
+    padding: 20px;
+  }
+
+  &__accent {
+    display: inline-block;
+    border: 3px solid red;
+    padding: 20px 10px;
+  }
+}
