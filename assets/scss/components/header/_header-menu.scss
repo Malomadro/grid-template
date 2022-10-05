@@ -10,8 +10,9 @@
 
 
   &__container {
-    display: flex;
+    display: grid;
     gap: $gap;
+    grid-template-columns: auto 1fr;
     @extend %container;
   }
 }
