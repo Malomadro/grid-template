@@ -2,19 +2,19 @@
 @use "../../mixins" as *;
 
 .header-navbar {
-display: grid;
-justify-items: end;
+  display: grid;
+  justify-items: end;
 
   &__list {
     @include unlist(0 (-$gap-sm) 0 0);
     display: grid;
-    
+
     gap: $gap;
     width: 100%;
     grid-template-columns: repeat(3, minmax(50px, max-content));
     justify-content: end;
 
-   
+
   }
 
   &__item {}
@@ -24,5 +24,12 @@ justify-items: end;
     padding: $gap $gap-sm;
     font-size: 1.125rem;
     letter-spacing: 0.088em;
+    transition: color 0.25s;
+
+    &:hover,
+    &:focus {
+      color: $color-accent;
+    }
+
   }
 }
