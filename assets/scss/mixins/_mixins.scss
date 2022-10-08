@@ -1,5 +1,9 @@
 @use "../presets" as *;
 
+@mixin box-shadow {
+  box-shadow: 3px 3px 10px black;
+}
+
 @mixin text-shortener {
   display: block;
   overflow: hidden;
