@@ -13,13 +13,11 @@
       justify-content: end;
 
       width: 100%;
-      margin: 0 -10px 0 0;
 
       gap: $gap;
       grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
       @include unlist(0 (-$gap-sm) 0 0);
     }
-
     @include md {
       position: absolute;
       top: 100%;
@@ -27,10 +25,17 @@
 
       display: none;
 
+      text-align: right;
+
       background-color: rgba($color-gray-dark, 0.9);
 
-      @include unlist;
       @include box-shadow;
+      @include unlist;
+    }
+
+    &.animate__flipInX,
+    &.animate__flipOutX {
+      display: block;
     }
   }
 
@@ -43,15 +48,14 @@
   &__link {
     display: block;
 
-    transition: color 0.25s;
-    letter-spacing: 0.088em;
+    transition: color 0.5s;
+    letter-spacing: 0.1em;
 
     font-size: 1.125rem;
 
     @include md-min {
       padding: $gap $gap-sm;
     }
-
     @include md {
       padding: $gap-sm $gap;
     }
@@ -66,7 +70,7 @@
     position: relative;
 
     width: 30px;
-    height: 22.5px;
+    height: 23px;
     margin: $gap 0;
 
     cursor: pointer;
@@ -93,41 +97,36 @@
       border-radius: 3px;
       background: $color-light;
 
-      &:nth-child(1) {
+      &:nth-of-type(1) {
         top: 0;
       }
 
-      &:nth-child(2),
-      &:nth-child(3) {
+      &:nth-of-type(2) {
         top: 9px;
       }
 
-      &:nth-child(4) {
+      &:nth-of-type(3) {
         top: 18px;
       }
     }
 
     &--active span {
-      &:nth-child(1) {
+      &:nth-of-type(1) {
         top: 9px;
-        left: 50%;
 
-        width: 0;
+        transform: rotate(135deg);
       }
 
-      &:nth-child(2) {
-        transform: rotate(45deg);
+      &:nth-of-type(2) {
+        left: -30px;
+
+        opacity: 0;
       }
 
-      &:nth-child(3) {
-        transform: rotate(-45deg);
-      }
-
-      &:nth-child(4) {
+      &:nth-of-type(3) {
         top: 9px;
-        left: 50%;
 
-        width: 0;
+        transform: rotate(-135deg);
       }
     }
   }

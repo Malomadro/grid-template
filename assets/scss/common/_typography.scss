@@ -48,3 +48,19 @@ a {
 
   color: $color-light;
 }
+
+h3 {
+  letter-spacing: 0.05em;
+
+  color: $color-gray;
+
+  font-size: 1.125rem;
+}
+
+p {
+  color: $color-gray;
+}
+
+input:focus {
+  outline: none;
+}

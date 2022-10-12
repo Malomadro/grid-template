@@ -16,6 +16,7 @@
 
   &__container {
     display: grid;
+    align-items: center;
 
     @extend %container;
     gap: $gap;
