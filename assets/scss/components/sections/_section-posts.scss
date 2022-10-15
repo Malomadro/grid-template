@@ -6,6 +6,15 @@
 
   &__container {
     @extend %container;
+
+    @include lg-md {
+      h2{
+        margin-bottom: 2.625rem;
+        font-size: 2rem;
+        letter-spacing: 0.1em;
+      }
+
+    }
   }
 
   &__grid {
@@ -87,6 +96,7 @@
     img {
       width: 100%;
       transition: transform 0.5s;
+      object-fit: cover;
     }
   }
 
