@@ -38,9 +38,11 @@ h2 {
   letter-spacing: 4px;
   line-height: 1.2em;
   color: $color-primary; 
-  font-weight: 700;
+ 
   margin-top: 0;
   margin-bottom: 3rem;
+
+
 }
 
 a {
@@ -55,6 +57,8 @@ h3 {
   color: $color-gray;
 
   font-size: 1.125rem;
+
+  
 }
 
 p {
@@ -64,3 +68,4 @@ p {
 input:focus {
   outline: none;
 }
+
