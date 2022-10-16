@@ -9,33 +9,28 @@
   background-color: $color-primary;
   padding: 50px 20px 70px 20px;
 
-  height: 253px;
-
   &__container {
     @extend %container;
   }
 
   &__social {
     display: grid;
-    margin-top: 1px;
     position: relative;
     justify-content: center;
+    margin-bottom: 40px;
     grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
-    margin-bottom: 39px;
 
     &::after {
+      position: absolute;
       content: "";
       width: 75px;
       height: 2px;
       bottom: -20px;
-      position: absolute;
       left: calc(50% - 75px / 2);
       background-color: rgba($color-light, 0.1);
-
     }
 
     a {
-      margin-top: -1px;
       display: block;
       padding: 10px;
       transition: color 0.5s;
@@ -44,16 +39,15 @@
       &:focus {
         color: $color-accent;
       }
+    }
 
-      .fab {
-        font-size: 36px;
-      }
+    .fab {
+      font-size: 36px;
     }
   }
 
   &__copy {
     font-size: $font-size;
-    line-height: 19px;
     text-align: center;
 
     span {
@@ -64,6 +58,10 @@
         font-weight: 100;
         color: $color-gray;
         margin-right: -8px;
+
+        @include sm {
+          margin-bottom: -3px;
+        }
       }
 
       &:nth-of-type(2) {
@@ -73,5 +71,4 @@
       }
     }
   }
-
 }

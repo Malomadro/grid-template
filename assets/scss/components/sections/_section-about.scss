@@ -1,16 +1,9 @@
 @use "../../mixins" as *;
 @use "../../presets" as *;
 
-
-@use "../../mixins" as *;
-@use "../../presets" as *;
-
-
 .about {
   letter-spacing: 0.055em;
-
   background-color: $color-gray-light;
-
   @extend %section;
 
   &__container {
@@ -23,41 +16,59 @@
       gap: $gap-x2;
       grid-template-columns: 1fr 271px;
     }
+
+    @include md-sm {
+      gap: $gap;
+      grid-template-columns: 1fr 236px;
+    }
+
+    @include sm {
+      gap: $gap;
+      grid-template-columns: 1fr;
+    }
   }
 
- 
-
-
-
   &__content {
-
     @include lg-md {
-      h2{
+      h2 {
         font-size: 2rem;
-        letter-spacing: 0.1em;
-       margin-bottom: 2.625rem;
+        margin-bottom: 2.625rem;
       }
     }
 
-    @include lg-min {
-      font-size: 1.125rem;
+    @include lg-md {
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 2.625rem;
+      }
+    }
+
+    @include md-sm {
+      h2 {
+        margin-bottom: 2.25rem;
+        font-size: 1.5rem;
+      }
+    }
+
+    @include sm {
+      h2 {
+        margin-bottom: 2.25rem;
+        text-align: center;
+        font-size: 1.5rem;
+      }
     }
 
     p {
       &:first-of-type {
         position: relative;
-
         margin-top: -5px;
 
         &::after {
           position: absolute;
           top: 0;
-
           width: 2px;
           height: 200px;
-
           content: "";
-
           background-color: rgba($color-gray, 0.1);
 
           @include lg-min {
@@ -87,9 +98,7 @@
   &__image {
     display: grid;
     align-content: center;
-
     justify-items: center;
-
 
     img {
       max-width: 100%;

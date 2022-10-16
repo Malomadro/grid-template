@@ -3,7 +3,6 @@
 
 .form {
   padding: $gap-lg 0;
-
   background-color: $color-primary;
 
   &__container {
@@ -46,7 +45,6 @@
 
   &__input {
     display: block;
-
     transition: background-color 0.5s, border-color 0.5s;
     letter-spacing: 0.15em;
 
@@ -55,13 +53,10 @@
     padding-right: $gap-lg;
     padding-left: $gap-lg;
 
-   
-
     color: $color-light;
     border: 2px solid rgba($color-light, 0);
     border-bottom-color: rgba($color-light, 0.25);
     background-color: rgba($color-light, 0.05);
-
     font-size: 1.125rem;
 
     &::placeholder {

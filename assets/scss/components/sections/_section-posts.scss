@@ -8,13 +8,28 @@
     @extend %container;
 
     @include lg-md {
-      h2{
+      h2 {
         margin-bottom: 2.625rem;
         font-size: 2rem;
-        letter-spacing: 0.1em;
       }
 
     }
+
+    @include md-sm {
+      h2 {
+        margin-bottom: 2.25rem;
+        font-size: 1.5rem;
+      }
+    }
+
+    @include sm {
+      h2 {
+        margin-bottom: 2.25rem;
+        text-align: center;
+        font-size: 1.5rem;
+      }
+    }
+
   }
 
   &__grid {
