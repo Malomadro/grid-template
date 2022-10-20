@@ -29,11 +29,9 @@
   }
 
   &__content {
-    @include lg-md {
-      h2 {
-        font-size: 2rem;
-        margin-bottom: 2.625rem;
-      }
+
+    @include lg-min {
+      font-size: 1.125rem;
     }
 
     @include lg-md {
